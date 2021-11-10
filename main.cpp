@@ -1,5 +1,12 @@
-#include <iostream>
+/*
+Author: Ryan Jiang
+Course: CSCI-135
+Instructor: Tong Yi and Mike Zamansky
+Assignment: Lab 9
+This programs contains some tests for the functions in funcs.cpp.
+*/
 
+#include <iostream>
 #include "coord3d.h"
 #include "funcs.h"
 
@@ -23,10 +30,19 @@ int main()
   std::cout << "Part C:\n";
   std::cout << "Original: " << pos.x << " " << pos.y << " " << pos.z << "\n";
   move(&pos, &vel, 2.0);
-  std::cout << "After move: " << pos.x << " " << pos.y << " " << pos.z << "\n";
+  std::cout << "After move: " << pos.x << " " << pos.y << " " << pos.z << "\n\n";
 
+  std::cout << "Part E:\n";
+  
+  Coord3D * ppos = createCoord3D(10, 20, 30);
+  Coord3D * pvel = createCoord3D(5.5, -1.4, 7.77);
 
+  std::cout << "Position from createCoord3D: " << (*ppos).x << " " << (*ppos).y << " " << (*ppos).z << "\n";
+  std::cout << "Velocity from createCoord3D: " << (*pvel).x << " " << (*pvel).y << " " << (*pvel).z << "\n";
 
+  move(ppos, pvel, 10.0);
+
+  std::cout << "Coordinates after 10 seconds: " << (*ppos).x << " " << (*ppos).y << " " << (*ppos).z << std::endl;
 
   return 0;
 }
