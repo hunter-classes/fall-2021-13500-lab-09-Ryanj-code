@@ -7,7 +7,6 @@ This is the header file for the functions in funcs.cpp.
 */
 
 #pragma once
-
 #include "coord3d.h"
 
 double length(Coord3D *p);
