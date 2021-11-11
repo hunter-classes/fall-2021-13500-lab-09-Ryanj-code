@@ -1,3 +1,11 @@
+/*
+Author: Ryan Jiang
+Course: CSCI-135
+Instructor: Tong Yi and Mike Zamansky
+Assignment: Lab 9
+This programs contains the tests for the functions in funcs.cpp.
+*/
+
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "funcs.h"
@@ -47,7 +55,7 @@ TEST_CASE("Testing move:"){
   pos = {0, 5, 10};
   vel = {5, 2, 7};
   move(&pos, &vel, 10.0);
-  CHECK((pos.x == 50 && pos.y == 70 && pos.z == 170));
+  CHECK((pos.x == 50 && pos.y == 25 && pos.z == 80));
 
   pos = {3.5, 10.3, 5.1};
   vel = {4.8, -2.9, 14.2};
